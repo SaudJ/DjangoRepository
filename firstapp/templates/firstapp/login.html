@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+      {%if message%}
+        {{message}}
+      {%endif%}
+    <form class="" action="{%url 'login'%}" method="POST">
+        {%csrf_token%}
+        {{form}}
+        <button type="submit" name="button" >Login</button>
+    </form>
+  </body>
+</html>

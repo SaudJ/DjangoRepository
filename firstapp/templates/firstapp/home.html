@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="{%url 'login'%}">Login</a>
+      <a href="{%url 'register'%}">Register</a>
+    </nav>
+    {%for article in articles%}
+      <div class="">
+        <a href="{%url 'user-profile' article.author.id%}">{{article.author}}</a>
+      </div>
+      <div class="">
+        {{article.subject}}
+      </div>
+      <div class="">
+        {{article.article}}
+      </div>
+      <br>
+    {%endfor%}
+  </body>
+</html>
